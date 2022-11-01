@@ -1,0 +1,200 @@
+
+@media (max-width: 767px) {
+
+/* varibles */
+:root {
+    /* font size */
+    --fs-4xl: 35px;
+    --fs-3xl: 26px;
+    --fs-2xl: 22px;
+    --fs-xl: 18px;
+}
+
+
+/* start header */
+.nav-toggler {
+    display: block;
+    height: 34px;
+    width: 40px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.nav-toggler span {
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: var(--main-color);
+    /* margin-top: auto; */
+    position: relative;
+    transition: var(--main-transition) ease-in-out;
+    -webkit-transition: var(--main-transition) ease-in-out;
+    -moz-transition: var(--main-transition) ease-in-out;
+    -ms-transition: var(--main-transition) ease-in-out;
+    -o-transition: var(--main-transition) ease-in-out;
+}
+
+.nav-toggler.active span {
+    background-color: transparent;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: var(--main-color);
+    transition: var(--main-transition) ease-in-out;
+    -webkit-transition: var(--main-transition) ease-in-out;
+    -moz-transition: var(--main-transition) ease-in-out;
+    -ms-transition: var(--main-transition) ease-in-out;
+    -o-transition: var(--main-transition) ease-in-out;
+}
+
+.nav-toggler span::before {
+    transform: translateY(-7px);
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+}
+
+.nav-toggler.active span::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.nav-toggler span::after {
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+}
+
+.nav-toggler.active span::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.header .nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: var(--bg-color);
+    padding: 60px 30px 30px;
+    overflow-y: auto;
+    transition: var(--main-transition) ease-in-out;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -webkit-transition: var(--main-transition) ease-in-out;
+    -moz-transition: var(--main-transition) ease-in-out;
+    -ms-transition: var(--main-transition) ease-in-out;
+    -o-transition: var(--main-transition) ease-in-out;
+}
+
+.header .nav.open {
+    box-shadow: var(--shadow);
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+
+.header .nav li {
+    display: block;
+    margin: 0;
+}
+
+.header .nav a {
+    font-size: var(--fs-lg);
+}
+
+.header .nav li + li {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* home */
+.home .container {
+    padding-top: 20px;
+}
+
+.home .home-text,
+.home .home-img {
+    grid-column: span 12;
+}
+
+.home .home-img {
+    order: -1;
+    margin-bottom: 20px;
+}
+
+
+
+/* about */
+.about .about-img,
+.about .about-text {
+    grid-column: span 12;
+}
+
+.about .about-text {
+    order: -1;
+}
+
+
+/* start services */
+.services .services-item {
+    grid-column: span 6;
+}
+
+
+
+/* pricing */
+.pricing .pricing-header .price {
+    height: 120px;
+    width: 120px;
+}
+
+
+/* contact */
+.contact .contact-info,
+.contact-form {
+    grid-column: span 12;
+}
+
+.contact .contact-info {
+    margin-bottom: 30px;
+}
+
+
+
+}
+

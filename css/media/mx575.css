@@ -1,0 +1,36 @@
+
+
+@media (max-width: 767px) {
+
+/* grid */
+.grid {
+    gap: 30px 15px;
+}
+
+
+/* home */
+.home .home-img img {
+    max-width: 200px;
+}
+
+.home .home-img .circle {
+    height: 250px;
+    width: 250px;
+}
+
+
+/* pricing */
+.pricing .pricing-item {
+    grid-column: span 12;
+}
+
+
+/* team */
+.team .team-item {
+    grid-column: span 6;
+}
+
+
+
+
+}
